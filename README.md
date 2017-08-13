@@ -1,3 +1,10 @@
+## Getting started for the Angular 4
+1.	Download the latest node.js
+2.	Type node -v and npm -v and make sure the version is updated
+3.	cd to the directory and type in npm install -g @angular/cli
+4.	Type in ng -v to make sure CLI is installed
+5.	Type ng -new first to bring in all the required packages
+________________________________________________________________________________________________________
 # First
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
@@ -27,10 +34,3 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 ________________________________________________________________________________________________________
-
-## Getting started for the Angular 4
-1.	Download the latest node.js
-2.	Type node -v and npm -v and make sure the version is updated
-3.	cd to the directory and type in npm install -g @angular/cli
-4.	Type in ng -v to make sure CLI is installed
-5.	Type ng -new first to bring in all the required packages
