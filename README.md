@@ -5,6 +5,12 @@
 4.	Type in ng -v to make sure CLI is installed
 5.	Type ng -new first to bring in all the required packages
 ________________________________________________________________________________________________________
+## Creating a component
+1.  ng g component <component-name>
+2.  
+
+
+________________________________________________________________________________________________________
 # First
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
