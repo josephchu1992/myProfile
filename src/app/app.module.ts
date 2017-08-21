@@ -1,20 +1,41 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { UIRouterModule } from '@uirouter/angular';
 
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
+import { HeaderComponent } from './header/header.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { FooterComponent } from './footer/footer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AuthguardGuard} from './authguard.guard';
+import { UserService } from './user.service'
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: LoginFormComponent
+  },
+
+  {
+    path: 'dashboard',
+    canActivate: [AuthguardGuard],
+    component: DashboardComponent
+  }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    HeaderComponent,
+    LoginFormComponent,
+    FooterComponent,
+    DashboardComponent,
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
-    // UIRouterModule.forRoot({ states: [ helloState, aboutState ], useHash: true })
   ],
-  providers: [],
+  providers: [UserService, AuthguardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
